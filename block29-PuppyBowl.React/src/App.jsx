@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1> App</h1>
+      <h2>Puppy Bowl App</h2>
       <NavBar />
       <Routes>
         <Route path="/" element={<AllPLayers/>}></Route>

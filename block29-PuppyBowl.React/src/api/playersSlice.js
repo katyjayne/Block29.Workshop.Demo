@@ -1,17 +1,20 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseURL =
+const baseUrl =
   "https://fsa-puppy-bowl.herokuapp.com/api/2401-GHP-ET-WEB-FT-SF/";
 
 export const playersApi = createApi({
   reducerPath: "playersApi",
-  baseQuery: fetchBaseQuery({ baseURL }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getPlayers: builder.query({
-      query: () => "players",
+      query: () => `players`,
+    }),
+    getSinglePlayer: builder.query({
+      query: (id) => `players/${id}`,
     }),
   }),
 });
 
 // "use" + endpoint name + "Query/Mutation"
-export const { useGetPlayersQuery } = playersApi;
+export const { useGetPlayersQuery, useGetSinglePlayerQuery } = playersApi;

@@ -2,7 +2,7 @@ function NewPlayerForm () {
 
   return (
     <>
-      <h3>Add a New Player</h3>
+      <h3>Add a New Player Here:</h3>
       <form>
         <label>
           Name:

@@ -5,7 +5,7 @@ function NavBar () {
   const id = Math.floor(Math.random() * 5 + 1);
   return (
     <>
-      <h2>Nav Bar Component</h2>
+      {/* <h2>Nav Bar Component</h2> */}
       <Link to="/">All Players</Link>
       <br></br>
       <Link to={`/players/${id}`}>Random Player</Link>

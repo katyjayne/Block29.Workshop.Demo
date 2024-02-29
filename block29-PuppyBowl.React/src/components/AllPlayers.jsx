@@ -1,4 +1,5 @@
 import NewPlayerForm from './NewPlayerForm';
+import { useGetPlayersQuery } from "../api/playersSlice";
 
 function AllPLayers() {
   const dummyPlayers = [
@@ -39,6 +40,9 @@ function AllPLayers() {
       cohortId: 1,
     },
   ];
+
+  const { data, isLoading } = useGetPlayersQuery();
+  console.log(data);
 
   return (
     <>

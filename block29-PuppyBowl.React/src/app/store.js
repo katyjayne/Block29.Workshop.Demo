@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { playersApi } from "../API/playersSlice";
+import { playersApi } from "../api/playersSlice";
 // TODO will need to import something from 'playersSlice'
 
 export const store = configureStore({

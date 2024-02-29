@@ -8,7 +8,10 @@ export const playersApi = createApi({
   baseQuery: fetchBaseQuery({ baseURL }),
   endpoints: (builder) => ({
     getPlayers: builder.query({
-      query: () => "/players",
+      query: () => "players",
     }),
   }),
 });
+
+// "use" + endpoint name + "Query/Mutation"
+export const { useGetPlayersQuery } = playersApi;

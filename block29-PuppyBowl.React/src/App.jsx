@@ -1,8 +1,8 @@
 import './App.css'
 import AllPLayers from './components/AllPlayers';
 import NavBar from './components/NavBar';
-import NewPlayerForm from './components/NewPlayerForm';
 import SinglePlayer from './components/SinglePlayer';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -10,9 +10,10 @@ function App() {
     <>
       <h1> App</h1>
       <NavBar />
-      <AllPLayers />
-      <SinglePlayer />
-      <NewPlayerForm />
+      <Routes>
+        <Route path="/" element={<AllPLayers/>}></Route>
+        <Route path="/players/:id" element={<SinglePlayer/>}></Route>
+      </Routes>
     </>
   )
 }

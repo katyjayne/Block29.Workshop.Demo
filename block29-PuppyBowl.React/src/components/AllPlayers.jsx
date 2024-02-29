@@ -46,6 +46,18 @@ function AllPLayers() {
       <NewPlayerForm />
       <h3>Roster</h3>
       {/* TODO use 'dummyPlayers' to build cards for each player with info + buttons to view details / remove */}
+      {dummyPlayers.map((player) => (
+        <div key={player.id} className="player-card">
+          <h4>{player.name}</h4>
+          <p>{player.breed}</p>
+          <img src={player.imageUrl} alt="player image" />
+          <br />
+          <button>View Details</button>
+          <button>Remove</button>
+        </div>
+
+      ))}
+
     </>
   );
 }
